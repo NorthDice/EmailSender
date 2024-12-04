@@ -15,9 +15,9 @@ namespace EmailSender
             _messageService = messageService;
         }
 
-        public void Notify()
+        public void Notify(string message)
         {
-            _messageService.SendMessage("Ok!");
+            _messageService.SendMessage(message);
         }
 
     }
