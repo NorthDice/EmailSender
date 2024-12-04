@@ -10,7 +10,7 @@ namespace EmailSender
     {
         public void Log(string message)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(message);
         }
     }
 }
