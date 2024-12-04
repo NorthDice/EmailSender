@@ -17,7 +17,7 @@ namespace EmailSender
 
         public void SendMessage(string message)
         {
-            Console.WriteLine("Message sended!");
+            Console.WriteLine(message);
 
             _logger.Log("Message loged!");
         }
