@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmailSender
 {
-    public class EmailService
+    public class EmailService : IMessageService
     {
         public void SendMessage(string message)
         {
