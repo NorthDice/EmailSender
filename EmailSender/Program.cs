@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace EmailSender
@@ -8,6 +9,10 @@ namespace EmailSender
         static void Main(string[] args)
         {
             IServiceCollection services = new ServiceCollection();
+
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
             DependencyContainer.Configure(services);
 
